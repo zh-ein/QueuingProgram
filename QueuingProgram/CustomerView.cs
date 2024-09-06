@@ -22,12 +22,8 @@ namespace QueuingProgram
                 string nextNumber = CashierClass.CashierQueue.Peek();
                 lblQueued.Text = nextNumber;
             }
-            else
-            {
-
-                MessageBox.Show("There are no more queues in the list.");
-                this.Close();
-            }
+           
+            
         }
     }
 }
