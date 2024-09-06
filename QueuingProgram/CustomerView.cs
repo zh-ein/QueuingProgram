@@ -15,24 +15,18 @@ namespace QueuingProgram
         public CustomerView()
         {
             InitializeComponent();
-            this.Controls.Add(lblQueued);
 
-            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000; // 1 sec
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
-        }
-        private void timer_Tick(object sender, EventArgs e)
-        {
             if (CashierClass.CashierQueue.Count > 0)
             {
-                
+
                 string nextNumber = CashierClass.CashierQueue.Peek();
                 lblQueued.Text = nextNumber;
             }
             else
             {
-                lblQueued.Text = "";
+
+                MessageBox.Show("There are no more queues in the list.");
+                this.Close();
             }
         }
     }
