@@ -18,13 +18,7 @@ namespace QueuingProgram
         {
             lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
             CashierClass.getNumberInQueue = lblQueue.Text;
-            CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
-            if (!CashierClass.IsQueueEmpty())
-            {
-                
-                CustomerView customerView = new CustomerView();
-                customerView.Show();
-            }
+            CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);            
         }
     }
 }

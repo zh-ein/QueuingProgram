@@ -35,25 +35,27 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(67, 46);
             label1.Name = "label1";
-            label1.Size = new Size(121, 25);
+            label1.Size = new Size(160, 32);
             label1.TabIndex = 0;
             label1.Text = "*Now Serving";
             // 
             // lblQueued
             // 
             lblQueued.AutoSize = true;
-            lblQueued.Location = new Point(125, 127);
+            lblQueued.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQueued.Location = new Point(97, 93);
             lblQueued.Name = "lblQueued";
-            lblQueued.Size = new Size(0, 25);
+            lblQueued.Size = new Size(0, 45);
             lblQueued.TabIndex = 0;
             // 
             // CustomerView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 221);
+            ClientSize = new Size(370, 221);
             Controls.Add(lblQueued);
             Controls.Add(label1);
             Name = "CustomerView";

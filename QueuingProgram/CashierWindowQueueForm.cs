@@ -33,7 +33,7 @@ namespace QueuingProgram
                 listCashierQueue.Items.Add(obj.ToString());
             }            
 
-            DisplayCashierQueue(CashierClass.CashierQueue);
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -45,8 +45,15 @@ namespace QueuingProgram
         {
             if (CashierClass.CashierQueue.Count > 0)
             {
+                CustomerView customerView = new CustomerView();
+                customerView.Show();
                 CashierClass.CashierQueue.Dequeue();
-                DisplayCashierQueue(CashierClass.CashierQueue);
+                
+            }
+            else if (CashierClass.CashierQueue.Count == 0)
+            {
+                CustomerView customerView = new CustomerView();
+                customerView.Show();
             }
         }
     }
